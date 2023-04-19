@@ -1,0 +1,126 @@
+/* Component style imports */
+@import url('navbar.css');
+
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600;800&family=Raleway:wght@300;400;500;600;700&display=swap');
+
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway';
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* Body */
+body {
+  margin: 80px 0 0 0;
+  padding: 0;
+  background-color: #EDEDE5;
+  font-family: "Raleway", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* About */
+#about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px auto;
+  padding: 0px 60px 0px 60px;
+  max-width: 600px;
+}
+
+#about h1 {
+  font-family: 'Raleway';
+  color: #333;
+  font-size: 40px;
+  margin-bottom: 7px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 45px;
+  font-weight: 200;
+}
+
+.about-text p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Raleway';
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 7px;
+}
+
+.about-text h3 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Raleway';
+  margin-top: 22px;
+  font-size: 19px;
+  font-weight: 400;
+  color: #333;
+}
+
+.about-text .name {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Montserrat';
+  font-weight: 300;
+}
+
+.portfolio-img {
+  width: 200px;
+  height: 200px;
+  margin: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio-img-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* The 'Love Machine' effect */
+.portfolio-img-container::before {
+  content: "";
+  position: absolute;
+  background: transparent;
+  background-size: 280px 280px;
+  width: 280px;
+  height: 280px;
+  top: 50%;
+  left: 50%;
+  margin-top: -140px;
+  margin-left: -140px;
+  background-image: url(../assets/halo-img.png);
+  background-repeat: no-repeat;
+  animation: rotate 15s linear infinite;
+  z-index: 0;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
